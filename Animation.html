@@ -3,6 +3,219 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body{
+   background-color:#f0f0f0;
+}     
+.inline {
+        width: 800px;
+        height: 770px;
+        position: fixed;
+        left: 10%;
+       right:10%;
+      }
+      .cons {
+        position: absolute;
+        width: 420px;
+        height: 50%;
+      }
+      .upper {
+        top: 0;
+        animation-name: example3;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+      }
+      .lower {
+        bottom: 0;
+        animation-name: example4;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+      }
+      .right {
+        left: 420px;
+      }
+      .upper.left {
+        border-top-left-radius: 100%;
+      }
+      .upper.right {
+        border-top-right-radius: 100%;
+      }
+      .lower.left {
+        border-bottom-left-radius: 100%;
+      }
+      .lower.right {
+        border-bottom-right-radius: 100%;
+      }
+      .sun {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: yellow;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        animation-name: example1;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        border-radius: 50%;
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        /* background: linear-gradient(90deg,transparent,yellow); */
+        box-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow,
+          0 0 200px yellow;
+      }
+      .moon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #b8b3b3;
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        animation-name: example2;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        border-radius: 50%;
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+       
+        box-shadow: 0 0 5px #b8b3b3, 0 0 25px #b8b3b3, 0 0 50px #b8b3b3,
+          0 0 200px #b8b3b3;
+      }
+      @keyframes example1 {
+        0% {
+          top: 50%;
+          left: 30%;
+        }
+        25% {
+          top: 20%;
+          left: 50%;
+        }
+        50% {
+          top: 50%;
+          left: 70%;
+        }
+        75% {
+          top: 80%;
+          left: 50%;
+        }
+        100% {
+          top: 50%;
+          left: 30%;
+        }
+      }
+      @keyframes example2 {
+        0% {
+          top: 50%;
+          left: 70%;
+        }
+        25% {
+          top: 80%;
+          left: 50%;
+        }
+        50% {
+          top: 50%;
+          left: 30%;
+        }
+        75% {
+          top: 20%;
+          left: 50%;
+        }
+        100% {
+          top: 50%;
+          left: 70%;
+        }
+      }
+      @keyframes example3 {
+        0% {
+          background: linear-gradient(180deg, rgb(0, 144, 255), transparent);
+        }
+        50% {
+          background: linear-gradient(180deg, rgb(0, 144, 255), transparent);
+        }
+        75% {
+          background: linear-gradient(180deg, #000000, transparent);
+        }
+        100% {
+          background: linear-gradient(180deg, #000000, transparent);
+        }
+      }
+
+      @keyframes example4 {
+        0% {
+          background: linear-gradient(180deg, transparent, #000000);
+        }
+        50% {
+          background: linear-gradient(180deg, transparent, #000000);
+        }
+        75% {
+          background: linear-gradient(180deg, transparent, rgb(0, 144, 255));
+        }
+        100% {
+          background: linear-gradient(180deg, transparent, rgb(0, 144, 255));
+        }
+      }
+
+    @media  (max-height: 600px) { 
+        .moon {
+          width: 45px;
+          height: 45px;
+        }
+        .sun {
+          width: 75px;
+          height: 75px;
+        }
+        .inline {
+          width: 298px;
+          height: 315px;
+          top: 15%;
+          left:45%;
+        }
+        .cons {
+          width: 140px;
+          height:155px;
+        }
+        .right {
+          left: 140px;
+        }
+       }
+@media  (max-width: 1300px) {
+        .moon {
+          width: 75px;
+          height: 75px;
+        }
+        .sun {
+          width: 125px;
+          height: 125px;
+        }
+        .inline {
+          height: 650px;
+          width:600px;
+          left:10%;
+          top:10%;
+        }
+        .cons {
+          width: 302px;
+          height:50%;
+        }
+        .right {
+          left: 302px;
+        }
+      }
+ 
+    </style>
   </head>
   <body>
     <div class="inline">
